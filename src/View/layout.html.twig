@@ -1,18 +1,21 @@
 {# layout.html.twig #}
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="icon" href="/assets/images/favicon.png">
+	</head>
 
-    <title>{% block title %}Hello !{% endblock %}</title>
-
-    <link rel="stylesheet" href="/assets/css/style.css"> 
-    <link rel="icon" href="/assets/images/favicon.png">
-</head>
-
-<body>
-    {% block navbar %}{% include 'component/_navbar.html.twig' %}{% endblock %}
-</body>
+	<body>
+		<h1>
+			{% block body %} Hello !
+			{% endblock %}
+		</h1>
+		{% block navbar %}
+			{% include 'component/_navbar.html.twig' %}
+		{% endblock %}
+	</body>
 </html>
